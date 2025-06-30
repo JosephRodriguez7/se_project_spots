@@ -1,0 +1,81 @@
+.profile {
+  display: flex;
+  padding: 34px 0 20px 0;
+  margin: 0 auto;
+  max-width: 1280px;
+  max-height: 210px;
+  border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
+}
+
+.profile__card {
+  display: flex;
+  gap: 20px;
+  max-width: 505px;
+  max-height: 190px;
+}
+
+.profile__avatar {
+  max-width: 190px;
+  max-height: 190px;
+  border-radius: 8px;
+}
+
+.profile__info {
+  display: flex;
+}
+
+.profile__title {
+  margin: 0;
+  padding-bottom: 12px;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: rgba(33, 33, 33, 1);
+}
+
+.profile__description {
+  margin: 0;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: rgba(33, 33, 33, 0.7);
+}
+
+.profile__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile__edit-form {
+  margin-top: auto;
+}
+
+.profile__edit-button {
+  display: flex;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(33, 33, 33, 1);
+  background-color: rgba(33, 33, 33, 0);
+  border-style: none;
+  gap: 8px;
+}
+
+.profile__post-form {
+  margin-left: auto;
+  margin-top: auto;
+  padding: 138px 0 0 20px;
+}
+
+.profile__post-button {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  background-color: rgba(33, 33, 33, 1);
+  color: rgba(252, 252, 229, 1);
+  width: 149px;
+  max-height: 52px;
+  border-style: none;
+  border-radius: 8px;
+  padding: 18px 0 18px 0;
+}

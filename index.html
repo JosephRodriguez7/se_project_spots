@@ -20,7 +20,7 @@
         <img
           src="./images/__MACOSX/Logo.svg"
           class="header__logo"
-          alt="icon of Spots Gallery"
+          alt="logo of Spots Gallery"
         />
       </header>
       <main class="content">
@@ -28,17 +28,27 @@
           <div class="profile__card">
             <img
               src="./images/spots-images/avatar.jpg"
-              class="profile__photo"
-              alt="photo of Bessie Coleman"
+              class="profile__avatar"
+              alt="user avatar"
             />
-            <h1 class="profile__title">Bessie Coleman</h1>
-            <h2 class="profile__subtitle">Civil Aviator</h2>
-            <form class="profile__edit-form">
-              <button class="profile__edit-button">Edit Profile</button>
-            </form>
+            <div class="profile__info">
+              <h1 class="profile__title">Bessie Coleman</h1>
+              <p class="profile__description">Civil Aviator</p>
+              <form class="profile__edit-form">
+                <button class="profile__edit-button">
+                  <img
+                    src="./images/slant-pencil-icon.svg.svg"
+                    alt="pencil icon"
+                  />Edit Profile
+                </button>
+              </form>
+            </div>
           </div>
           <form class="profile__post-form">
-            <button class="profile__post-button">New Post</button>
+            <button class="profile__post-button">
+              <img src="./images/white-plus-sign.svg.svg" alt="plus icon" />
+              New Post
+            </button>
           </form>
         </section>
         <section class="cards"></section>

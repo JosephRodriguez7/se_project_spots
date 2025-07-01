@@ -1,0 +1,15 @@
+.cards {
+  margin: 0 auto;
+}
+
+.cards__list {
+  max-width: 1280px;
+  max-height: 970px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 413px);
+  grid-template-rows: repeat(auto-fit, 445px);
+  list-style: none;
+  margin: 20px auto;
+  padding: 0;
+  gap: 40px 20px;
+}

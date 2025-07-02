@@ -8,6 +8,10 @@ I consider this my first true responsive design, as it was tested with super wid
 
 The website was designed according to the Figma's specifications, including icons and truncating text to avoid overflow.
 
+### Link to my project:
+
+https://josephrodriguez7.github.io/se_project_spots/
+
 ## Functions and Specifications:
 
 1. Header spans 100% of the website's width.

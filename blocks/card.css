@@ -39,28 +39,38 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 120%;
-  letter-spacing: 0%;
   color: rgba(33, 33, 33, 1);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 461px) {
   .card {
     width: 100%;
-    max-width: 413px;
+    max-width: 288px;
     height: auto;
     aspect-ratio: 1 / 1;
+    justify-content: center;
+    align-items: center;
   }
 
   .card__image {
     width: 100%;
-    max-width: 413px;
+    max-width: 288px;
     object-fit: cover;
     border-radius: 8px;
     display: block;
     aspect-ratio: 1 / 1;
+    height: auto;
+  }
+
+  .card__content {
+    width: auto;
   }
 
   .card__caption {
     font-size: 16px;
+    margin: 0;
   }
 }

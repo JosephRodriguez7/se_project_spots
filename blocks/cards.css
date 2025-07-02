@@ -20,10 +20,13 @@
   .cards__list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
-    gap: 40px 20px;
+    grid-auto-rows: auto;
+    gap: 20px;
     justify-content: center;
     list-style: none;
     margin: 20px auto;
     padding: 0;
+    align-items: center;
+    justify-items: center;
   }
 }

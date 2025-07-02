@@ -1,8 +1,8 @@
-# My very first true responsive-design project with Triple Ten.
+# My very first true responsive-design project with Triple Ten
 
 My project for Sprint 3 at Triple Ten consisted in creating this tasteful digital art gallery. This webpage has a modest header, followed by a thorough profile dashboard. In the middle, the art gallery is displayed in a nice grid arrangement of three columns and two rows.
 
-As the website adapts to smaller screens, the elements within move, resize and rearrange to comfortable layouts.
+As the website adapts to smaller screens, the elements within will move, resize, and rearrange to comfortable layouts.
 
 I consider this my first true responsive design, as it was tested with super wide screens, down to a width as narrow as 320px.
 
@@ -12,7 +12,7 @@ The website was designed according to the Figma's specifications, including icon
 
 1. Header spans 100% of the website's width.
 2. The main tag was given the "content" class. It has a constant padding of 20px on either side for a clean consistent look with different screen sizes.
-3. The Profile dashboard is composed of a Card containing the user's avatar, profile name, profile description, and a edit profile button (with corresponding icon) with animations when hovered. Next to the card, a "new post" button was added
+3. The Profile dashboard is composed of a Card containing the user's avatar, profile name, profile description, and a edit profile button (with corresponding icon) with animations when hovered. Next to the card, a "new post" button was added.
 4. Additionally, all buttons in this website have hover (with transition) effects and respective icons.
 5. The "cards" section of the site contains a responsive grid. Starts as a three column and two row grid with responsive design. It maintains the 1:1 aspect ratio for the images throughout.
 6. As the screen size narrows, the grid reduces to two columns in Tablet mode, then reduces to a single column in Mobile mode. The "justify-items" declaration was used to ensure elements placed within a grid cell remained centered.

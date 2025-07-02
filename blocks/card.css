@@ -48,15 +48,16 @@
     width: 100%;
     max-width: 413px;
     height: auto;
+    aspect-ratio: 1 / 1;
   }
 
   .card__image {
-    width: 289px;
-    height: 288px;
+    width: 100%;
+    max-width: 413px;
     object-fit: cover;
     border-radius: 8px;
     display: block;
-    aspect-ratio: 1 /1;
+    aspect-ratio: 1 / 1;
   }
 
   .card__caption {

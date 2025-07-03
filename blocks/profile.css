@@ -27,7 +27,7 @@
 .profile__title {
   display: -webkit-box;
   margin: 0;
-  padding-bottom: 12px;
+  margin-bottom: 12px;
   font-weight: 500;
   font-size: 32px;
   line-height: 100%;
@@ -129,7 +129,7 @@
   }
 
   .profile__title {
-    padding-bottom: 6px;
+    margin-bottom: 6px;
     font-size: 20px;
     gap: 0;
     text-align: center;

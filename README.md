@@ -1,22 +1,48 @@
-# My very first true responsive-design project with Triple Ten
+# 🖼️ Spots - Social Media Image Gallery
+
+"Spots gallery" is a visually appealing social media platform specialized in showcasing the User's curated media gallery. Users are able to post new images to the platform, with captions, and have the capability to receive likes for each post.
+
+### 👨‍🎨 Developer's notes:
 
 My project for Sprint 3 at Triple Ten consisted in creating this tasteful digital art gallery. This webpage has a modest header, followed by a thorough profile dashboard. In the middle, the art gallery is displayed in a nice grid arrangement of three columns and two rows.
 
 As the website adapts to smaller screens, the elements within will move, resize, and rearrange to comfortable layouts.
 
-I consider this my first true responsive design, as it was tested with super wide screens, down to a width as narrow as 320px.
+I consider this my first true responsive design, as it was tested with super-wide screens, down to a width as narrow as 320px.
 
 The website was designed according to the Figma's specifications, including icons and truncating text to avoid overflow.
+
+#### Skills used:
+
+1. Semantic HTML5
+2. CSS3: Responsive design with Flexbox and Grid
+
+- Media queries.
+- Multi-line text truncation with -webkit-line-clamp.
+- Custom buttons, hover effects, and adaptive spacing.
+- Consistent UI/UX design with clean visual hierarchy and button styling.
+
+3. Version control with Git and GitHub Repository Management:
+
+- Committing snapshots and demo video.
+- Maintining Git History.
+- Structured README.md
+
+4. Project Organization:
+
+- Consistent use of flat BEM file structure.
+- Avoided nesting of selectors in CSS.
+- Applied BEM naming convention.
 
 ### Link to my project:
 
 https://josephrodriguez7.github.io/se_project_spots/
 
-## Check my project's Demo:
+## 📸 Check my project's Demo:
 
 [![Watch the demo](demo/demo-screenshot.jpg)](demo/demo-video.mp4)
 
-## Functions and Specifications:
+## 🚀 Functions and Specifications:
 
 1. Header spans 100% of the website's width.
 2. The main tag was given the "content" class. It has a constant padding of 20px on either side for a clean consistent look with different screen sizes.
@@ -26,7 +52,7 @@ https://josephrodriguez7.github.io/se_project_spots/
 6. As the screen size narrows, the grid reduces to two columns in Tablet mode, then reduces to a single column in Mobile mode. The "justify-items" declaration was used to ensure elements placed within a grid cell remained centered.
 7. The images within the cards are only reduced in size per Figma's requirement with screens 461px or smaller.
 
-## Future Ideas and Improvements:
+## 🛠️ Future Ideas and Improvements:
 
 I would like to add real functionality to the "edit profile" and "new post" buttons. Most likely, I will revisit this project once I have learned Javascript, starting on Sprint 4.
 

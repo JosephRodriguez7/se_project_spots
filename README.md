@@ -12,6 +12,10 @@ The website was designed according to the Figma's specifications, including icon
 
 https://josephrodriguez7.github.io/se_project_spots/
 
+## Check my project's Demo:
+
+[![Watch the demo](demo/demo-screenshot.jpg)](demo/demo-video.mp4)
+
 ## Functions and Specifications:
 
 1. Header spans 100% of the website's width.

@@ -48,7 +48,7 @@
   text-overflow: ellipsis;
   white-space: normal;
   overflow: hidden;
-  -webkit-line-clamp: 1;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
 
@@ -160,7 +160,6 @@
 
   .profile__post-button {
     margin: 0 auto;
-    justify-content: center;
     align-items: center;
     width: 100%;
     max-width: 300px;

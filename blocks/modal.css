@@ -1,0 +1,145 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  padding-right: 10px;
+  padding-left: 10px;
+  visibility: hidden;
+}
+
+.modal_is-opened {
+  visibility: visible;
+}
+
+.modal__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 730px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 32px 50px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 630px;
+  margin: 0 auto 32px;
+  max-height: 40px;
+}
+
+.modal__title {
+  font-size: 32px;
+  color: rgba(33, 33, 33, 1);
+}
+
+.modal__close-button {
+  border: none;
+  background-color: transparent;
+  opacity: 40%;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.modal__close-button:hover {
+  opacity: unset;
+  cursor: pointer;
+}
+
+.modal__form {
+  width: 100%;
+  max-width: 630px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+.form__fieldset {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  max-height: 272px;
+  border: none;
+  gap: 32px;
+  padding: 0;
+  padding-bottom: 32px;
+}
+
+.form__label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 16px;
+  color: rgba(33, 33, 33, 0.7);
+}
+
+.form__input {
+  border-radius: 8px;
+  border-width: 1px;
+  max-width: 630px;
+  max-height: 52px;
+  font-size: 20px;
+  color: rgba(33, 33, 33, 1);
+  border-color: rgba(33, 33, 33, 0.4);
+  padding: 16px 12px;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.form__input:hover {
+  border-color: rgba(33, 33, 33, 1);
+  cursor: pointer;
+}
+
+.form__input:active {
+  border-width: 1px;
+}
+
+.form__submit-button {
+  width: 156px;
+  height: 52px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  background-color: rgba(33, 33, 33, 1);
+  color: rgba(252, 245, 229, 1);
+  transition: background-color 0.5s ease-in-out;
+}
+
+.form__submit-button:hover {
+  background-color: rgba(33, 33, 33, 0.8);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 461px) {
+  .modal__title {
+    font-size: 20px;
+  }
+
+  .modal__container {
+    padding: 12px;
+  }
+
+  .form__input {
+    font-size: 16px;
+  }
+
+  .form__submit-button {
+    width: 100%;
+  }
+}

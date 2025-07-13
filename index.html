@@ -127,6 +127,80 @@
       <footer class="footer">
         <p class="footer__copyright">&copy; 2025 Joseph Rodriguez</p>
       </footer>
+      <div class="modal modal_is-opened">
+        <div class="modal__container">
+          <div class="modal__header">
+            <h2 class="modal__title">Edit profile</h2>
+            <button class="modal__close-button" type="button">
+              <img src="./images/cancel-button-dark.svg" alt="x-icon" />
+            </button>
+          </div>
+          <form class="modal__form">
+            <fieldset class="form__fieldset">
+              <label class="form__label" for="name-input">
+                Name
+                <input
+                  type="text"
+                  class="form__input"
+                  name="name-input"
+                  id="name-input"
+                  placeholder="Type your name"
+                  required
+                />
+              </label>
+              <label class="form__label" for="description-input">
+                Description
+                <input
+                  type="text"
+                  class="form__input"
+                  name="description-input"
+                  id="description-input"
+                  placeholder="Describe yourself"
+                  required
+                />
+              </label>
+            </fieldset>
+            <button type="submit" class="form__submit-button">Save</button>
+          </form>
+        </div>
+      </div>
+      <div class="modal modal_is-opened">
+        <div class="modal__container">
+          <div class="modal__header">
+            <h2 class="modal__title">New post</h2>
+            <button class="modal__close-button" type="button">
+              <img src="./images/cancel-button-dark.svg" alt="x-icon" />
+            </button>
+          </div>
+          <form class="modal__form">
+            <fieldset class="form__fieldset">
+              <label class="form__label" for="image-link-input">
+                Image link
+                <input
+                  type="url"
+                  class="form__input"
+                  name="image-link-input"
+                  id="image-link-input"
+                  placeholder="Paste a link to the picture"
+                  required
+                />
+              </label>
+              <label class="form__label" for="caption-input">
+                Caption
+                <input
+                  type="text"
+                  class="form__input"
+                  name="caption-input"
+                  id="caption-input"
+                  placeholder="Type your caption"
+                  required
+                />
+              </label>
+            </fieldset>
+            <button type="submit" class="form__submit-button">Save</button>
+          </form>
+        </div>
+      </div>
     </div>
   </body>
 </html>

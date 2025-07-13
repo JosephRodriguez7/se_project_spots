@@ -5,6 +5,7 @@
 }
 
 .modal {
+  visibility: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,11 +15,10 @@
   z-index: 1000;
   padding-right: 10px;
   padding-left: 10px;
-  visibility: hidden;
 }
 
 .modal_is-opened {
-  visibility: visible;
+  /* visibility: visible; */
 }
 
 .modal__container {

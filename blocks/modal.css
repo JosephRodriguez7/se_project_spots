@@ -18,7 +18,7 @@
 }
 
 .modal_is-opened {
-  /* visibility: visible; */
+  visibility: visible;
 }
 
 .modal__container {

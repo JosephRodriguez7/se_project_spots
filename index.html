@@ -34,22 +34,21 @@
             <div class="profile__info">
               <h1 class="profile__title">Bessie Coleman</h1>
               <p class="profile__description">Civil Aviator</p>
-              <form class="profile__edit-form">
-                <button class="profile__edit-button">
-                  <img
-                    src="./images/slant-pencil-icon.svg.svg"
-                    alt="pencil icon"
-                  />Edit Profile
-                </button>
-              </form>
+              <form class="profile__edit-form"></form>
+              <button class="profile__edit-button" id="editProfileBtn">
+                <img
+                  src="./images/slant-pencil-icon.svg.svg"
+                  alt="pencil icon"
+                />Edit Profile
+              </button>
             </div>
           </div>
-          <form class="profile__post-form">
-            <button class="profile__post-button">
+          <div class="profile__post-form">
+            <button class="profile__post-button" id="newPostBtn">
               <img src="./images/white-plus-sign.svg.svg" alt="plus icon" />
               New Post
             </button>
-          </form>
+          </div>
         </section>
         <section class="cards">
           <ul class="cards__list">
@@ -127,7 +126,7 @@
       <footer class="footer">
         <p class="footer__copyright">&copy; 2025 Joseph Rodriguez</p>
       </footer>
-      <div class="modal modal_is-opened">
+      <div class="modal" id="edit-profile-modal">
         <div class="modal__container">
           <div class="modal__header">
             <h2 class="modal__title">Edit profile</h2>
@@ -164,7 +163,7 @@
           </form>
         </div>
       </div>
-      <div class="modal modal_is-opened">
+      <div class="modal" id="new-post-modal">
         <div class="modal__container">
           <div class="modal__header">
             <h2 class="modal__title">New post</h2>
@@ -202,5 +201,6 @@
         </div>
       </div>
     </div>
+    <script src="./scripts/script.js"></script>
   </body>
 </html>

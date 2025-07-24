@@ -36,6 +36,18 @@ initialCards.forEach(function (card) {
   console.log(card.name);
 });
 
+//edit profile modal
+const profileNameEl = document.querySelector(".profile__title");
+const profileDescriptionEl = document.querySelector(".profile__description");
+const profileNameInput = document.querySelector("#name-input");
+const profileDescriptionInput = document.querySelector("#description-input");
+const profileSaveBtn = document.querySelector(".modal__submit-button");
+
+//new post modal
+const postCaptionInput = document.querySelector("#caption-input");
+const postLinkInput = document.querySelector("#image-link-input");
+const postSaveBtn = document.querySelector(".modal__submit-button");
+
 //open button selectors
 const editProfileBtn = document.querySelector("#editProfileBtn");
 const newPostBtn = document.querySelector("#newPostBtn");
@@ -56,10 +68,34 @@ editProfileBtn.addEventListener("click", function () {
   console.log("editProfileBtn was clicked");
 });
 
+profileNameInput.value = profileNameEl.textContent;
+profileDescriptionInput.value = profileDescriptionEl.textContent;
+
 modalProfileCloseBtn.addEventListener("click", function () {
   editProfileModal.classList.remove("modal_is-opened");
   console.log("modalProfileCloseBtn was clicked");
 });
+
+//edit profile submission functions
+function handleProfileFormSubmit(evt) {
+  evt.preventDefault();
+  profileNameEl.textContent = profileNameInput.value;
+  profileDescriptionEl.textContent = profileDescriptionInput.value;
+  editProfileModal.classList.remove("modal_is-opened");
+}
+editProfileModal.addEventListener("submit", handleProfileFormSubmit);
+// end of function//
+
+//new post submission functions
+function handlePostFormSubmit(evt) {
+  evt.preventDefault();
+  newPostModal.classList.remove("modal_is-opened");
+  console.log(postCaptionInput.value);
+  console.log(postLinkInput.value);
+}
+newPostModal.addEventListener("submit", handlePostFormSubmit);
+
+// end of function//
 
 //new post events
 newPostBtn.addEventListener("click", function () {

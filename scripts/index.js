@@ -31,11 +31,6 @@ const initialCards = [
   },
 ];
 
-// for loop cards
-initialCards.forEach(function (card) {
-  console.log(card.name);
-});
-
 //edit profile modal
 const profileNameEl = document.querySelector(".profile__title");
 const profileDescriptionEl = document.querySelector(".profile__description");
@@ -66,10 +61,9 @@ const modalPostCloseBtn = newPostModal.querySelector(".modal__close-button");
 editProfileBtn.addEventListener("click", function () {
   editProfileModal.classList.add("modal_is-opened");
   console.log("editProfileBtn was clicked");
+  profileNameInput.value = profileNameEl.textContent;
+  profileDescriptionInput.value = profileDescriptionEl.textContent;
 });
-
-profileNameInput.value = profileNameEl.textContent;
-profileDescriptionInput.value = profileDescriptionEl.textContent;
 
 modalProfileCloseBtn.addEventListener("click", function () {
   editProfileModal.classList.remove("modal_is-opened");
@@ -106,4 +100,9 @@ newPostBtn.addEventListener("click", function () {
 modalPostCloseBtn.addEventListener("click", function () {
   newPostModal.classList.remove("modal_is-opened");
   console.log("modalPostCloseBtn was clicked");
+});
+
+// for loop cards
+initialCards.forEach(function (card) {
+  console.log(card.name);
 });

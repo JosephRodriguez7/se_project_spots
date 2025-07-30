@@ -59,23 +59,37 @@ const modalPostCloseBtn = newPostModal.querySelector(".modal__close-button");
 
 //edit profile events
 editProfileBtn.addEventListener("click", function () {
-  editProfileModal.classList.add("modal_is-opened");
+  openModal(editProfileModal);
   console.log("editProfileBtn was clicked");
   profileNameInput.value = profileNameEl.textContent;
   profileDescriptionInput.value = profileDescriptionEl.textContent;
 });
 
 modalProfileCloseBtn.addEventListener("click", function () {
-  editProfileModal.classList.remove("modal_is-opened");
+  closeModal(editProfileModal);
   console.log("modalProfileCloseBtn was clicked");
 });
+
+//open & close modal functions: START
+//open modal function
+
+function openModal(modal) {
+  modal.classList.add("modal_is-opened");
+}
+
+// close modal function
+
+function closeModal(modal) {
+  modal.classList.remove("modal_is-opened");
+}
+//open & close modal functions: END
 
 //edit profile submission functions
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
   profileNameEl.textContent = profileNameInput.value;
   profileDescriptionEl.textContent = profileDescriptionInput.value;
-  editProfileModal.classList.remove("modal_is-opened");
+  closeModal(editProfileModal);
 }
 editProfileModal.addEventListener("submit", handleProfileFormSubmit);
 // end of function//
@@ -83,7 +97,7 @@ editProfileModal.addEventListener("submit", handleProfileFormSubmit);
 //new post submission functions
 function handlePostFormSubmit(evt) {
   evt.preventDefault();
-  newPostModal.classList.remove("modal_is-opened");
+  closeModal(newPostModal);
   console.log(postCaptionInput.value);
   console.log(postLinkInput.value);
 }
@@ -93,12 +107,12 @@ newPostModal.addEventListener("submit", handlePostFormSubmit);
 
 //new post events
 newPostBtn.addEventListener("click", function () {
-  newPostModal.classList.add("modal_is-opened");
+  openModal(newPostModal);
   console.log("newPostBtn was clicked");
 });
 
 modalPostCloseBtn.addEventListener("click", function () {
-  newPostModal.classList.remove("modal_is-opened");
+  closeModal(newPostModal);
   console.log("modalPostCloseBtn was clicked");
 });
 

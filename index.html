@@ -52,74 +52,16 @@
         </section>
         <section class="cards">
           <ul class="cards__list">
-            <li class="card">
-              <img
-                src="./images/spots-images/val-thorens.jpg"
-                alt="Photo of Val Thorens"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__caption">Val Thorens</h2>
-                <button class="card__like-button" type="button"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/spots-images/restaurant-terrace.jpg"
-                alt="Photo of a Restaurant Terrace"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__caption">Restaurant terrace</h2>
-                <button class="card__like-button" type="button"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/spots-images/outdoor-cafe.jpg"
-                alt="Photo of an Outdooor Cafe"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__caption">An outdoor cafe</h2>
-                <button class="card__like-button" type="button"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/spots-images/long-bridge.jpg"
-                alt="Photo of a Long Bridge"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__caption">
-                  A very long bridge, over the forest...
-                </h2>
-                <button class="card__like-button" type="button"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/spots-images/tunnel-morning-light.jpg"
-                alt="Photo of a Tunnel"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__caption">Tunnel with morning light</h2>
-                <button class="card__like-button" type="button"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/spots-images/mountain-house.jpg"
-                alt="photo of a Mountain House"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__caption">Mountain house</h2>
-                <button class="card__like-button" type="button"></button>
-              </div>
-            </li>
+            <template id="card-template">
+              <li class="card">
+                <button class="card__delete-button" type="button"></button>
+                <img class="card__image" src="" alt="" />
+                <div class="card__content">
+                  <h2 class="card__caption">Val Thorens</h2>
+                  <button class="card__like-button" type="button"></button>
+                </div>
+              </li>
+            </template>
           </ul>
         </section>
       </main>
@@ -198,6 +140,22 @@
             </fieldset>
             <button type="submit" class="modal__submit-button">Save</button>
           </form>
+        </div>
+      </div>
+      <div class="modal" id="card-modal">
+        <div class="modal__card-container">
+          <button
+            class="modal__close-button modal__close-button_alt"
+            type="button"
+          >
+            <img src="./images/cancel-btn-light.svg" alt="x-icon" />
+          </button>
+          <img
+            class="modal__card-image"
+            src="https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg"
+            alt="Golden Gate Bridge"
+          />
+          <p class="modal__card-caption">Golden Gate Bridge</p>
         </div>
       </div>
     </div>

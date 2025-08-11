@@ -186,3 +186,28 @@ initialCards.forEach(function (card) {
   const cardElement = getCardElement(card);
   cardsContainer.append(cardElement);
 });
+
+// closing modals w/ esc key
+const closeModalEsc = (evt) => {
+  if (evt.key === "Escape") {
+    const openedModal = document.querySelector(".modal_is-opened");
+    if (openedModal) {
+      closeModal(openedModal);
+    }
+  }
+};
+
+// closing modals by clicking overlay
+const closeModalOverlayClick = (evt) => {
+  if (evt.target.classList.contains("modal_is-opened")) {
+    closeModal(evt.target);
+  }
+};
+
+// allModals selector
+const allModals = document.querySelectorAll(".modal");
+allModals.forEach((modal) => {
+  modal.addEventListener("mousedown", closeModalOverlayClick);
+});
+
+document.addEventListener("keydown", closeModalEsc);

@@ -1,3 +1,12 @@
+const settings = {
+  formSelector: ".modal__form",
+  inputSelector: ".modal__input",
+  submitButtonSelector: ".modal__submit-button",
+  inactiveButtonClass: ".modal__submit-button_inactive",
+  inputErrorClass: ".modal__input_type_error",
+  errorClass: "modal__error_active",
+};
+
 const showInputError = (formElement, inputElement, errorMessage) => {
   const errorMessageID = inputElement.id + "-error";
   const errorMessageElement = formElement.querySelector(
@@ -67,4 +76,4 @@ const enableValidation = () => {
   console.log(formList);
 };
 
-enableValidation();
+enableValidation(settings);

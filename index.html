@@ -86,8 +86,11 @@
                   name="name-input"
                   id="name-input"
                   placeholder="Type your name"
+                  minlength="2"
+                  maxlength="40"
                   required
                 />
+                <span id="name-input-error" class="modal__error">Error!</span>
               </label>
               <label class="modal__label" for="description-input">
                 Description
@@ -97,8 +100,13 @@
                   name="description-input"
                   id="description-input"
                   placeholder="Describe yourself"
+                  minlength="2"
+                  maxlength="200"
                   required
                 />
+                <span id="description-input-error" class="modal__error"
+                  >Error!</span
+                >
               </label>
             </fieldset>
             <button type="submit" class="modal__submit-button">Save</button>
@@ -125,6 +133,7 @@
                   placeholder="Paste a link to the picture"
                   required
                 />
+                <span id="image-link-input-error" class="modal__error"></span>
               </label>
               <label class="modal__label" for="caption-input">
                 Caption
@@ -134,8 +143,11 @@
                   name="caption-input"
                   id="caption-input"
                   placeholder="Type your caption"
+                  minlength="2"
+                  maxlength="30"
                   required
                 />
+                <span id="caption-input-error" class="modal__error"></span>
               </label>
             </fieldset>
             <button type="submit" class="modal__submit-button">Save</button>
@@ -159,6 +171,7 @@
         </div>
       </div>
     </div>
+    <script src="./scripts/blocks/validation.js"></script>
     <script src="./scripts/index.js"></script>
   </body>
 </html>

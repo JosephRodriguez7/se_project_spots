@@ -16,7 +16,6 @@
 }
 
 .card__like-button:hover {
-  background-image: url(../images/like-icon-dark.svg);
   opacity: 100%;
   background-size: cover;
   cursor: pointer;
@@ -27,12 +26,12 @@
   background-image: url(../images/hear-btn-liked.svg);
   background-size: cover;
   color: rgba(255, 101, 101, 1);
+  opacity: 100%;
   background-color: transparent;
   border: none;
 }
 
 .card__like-button_active:hover {
-  background-image: url(../images/hear-btn-liked.svg);
   background-size: cover;
   opacity: 50%;
   background-color: transparent;

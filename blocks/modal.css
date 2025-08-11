@@ -118,7 +118,6 @@
   border: none;
   gap: 32px;
   padding: 0;
-  padding-bottom: 32px;
 }
 
 .modal__label {
@@ -131,7 +130,7 @@
 
 .modal__input {
   border-radius: 8px;
-  border-width: 1px;
+  border-width: 1.5px;
   max-width: 630px;
   max-height: 52px;
   font-size: 20px;
@@ -139,6 +138,21 @@
   border-color: rgba(33, 33, 33, 0.4);
   padding: 16px 12px;
   transition: border-color 0.2s ease-in-out;
+}
+
+.modal__input:active {
+  border-color: rgba(33, 33, 33, 0.4);
+}
+
+.modal__error {
+  font-size: 16px;
+  color: rgba(255, 0, 0, 0.7);
+  display: none;
+}
+
+.modal__error_active {
+  visibility: visible;
+  display: block;
 }
 
 .modal__input:hover {
@@ -150,6 +164,10 @@
   border-width: 1px;
 }
 
+.modal__input_type_error {
+  border-color: rgba(255, 0, 0, 0.6);
+}
+
 .modal__submit-button {
   width: 156px;
   height: 52px;
@@ -159,11 +177,25 @@
   background-color: rgba(33, 33, 33, 1);
   color: rgba(252, 245, 229, 1);
   transition: background-color 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  margin-top: 32px;
 }
 
 .modal__submit-button:hover {
   background-color: rgba(33, 33, 33, 0.8);
   cursor: pointer;
+}
+
+.modal__submit-button_inactive {
+  background-color: rgba(33, 33, 33, 1);
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.modal__submit-button_inactive:hover {
+  background-color: rgba(33, 33, 33, 1);
+  opacity: 50%;
+  cursor: not-allowed;
 }
 
 @media screen and (max-width: 637px) {
@@ -186,11 +218,21 @@
     padding: 12px;
   }
 
+  .modal__fieldset {
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+
   .modal__input {
     font-size: 16px;
   }
 
   .modal__submit-button {
     width: 100%;
+    margin-top: 24px;
+  }
+
+  .modal__card-image {
+    max-width: 288px;
   }
 }

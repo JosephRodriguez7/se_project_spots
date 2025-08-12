@@ -36,7 +36,7 @@
   white-space: normal;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .profile__description {

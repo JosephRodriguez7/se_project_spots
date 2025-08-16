@@ -2,6 +2,7 @@ import "./index.css";
 import {
   enableValidation,
   resetValidation,
+  toggleButtonState,
   settings,
 } from "../scripts/modules/validation.js";
 
@@ -143,8 +144,13 @@ function handlePostFormSubmit(evt) {
 
   const cardElement = getCardElement(inputValues);
   cardsContainer.prepend(cardElement);
-  evt.target.reset();
-  resetValidation(evt.target, settings);
+
+  const form = evt.target;
+  const submitBtn = form.querySelector(settings.submitButtonSelector);
+  const inputList = Array.from(form.querySelectorAll(settings.inputSelector));
+  form.reset();
+  toggleButtonState(inputList, submitBtn, settings);
+  resetValidation(form, settings);
 }
 newPostModal.addEventListener("submit", handlePostFormSubmit);
 // end of function//

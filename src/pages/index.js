@@ -1,3 +1,10 @@
+import "./index.css";
+import {
+  enableValidation,
+  resetValidation,
+  settings,
+} from "../scripts/modules/validation.js";
+
 //cards array
 const initialCards = [
   {
@@ -79,7 +86,9 @@ const modalPostCloseBtn = newPostModal.querySelector(".modal__close-button");
 //edit profile events
 editProfileBtn.addEventListener("click", function () {
   openModal(editProfileModal);
-  console.log("editProfileBtn was clicked");
+
+  const form = editProfileModal.querySelector(settings.formSelector);
+  resetValidation(form, settings);
   profileNameInput.value = profileNameEl.textContent;
   profileDescriptionInput.value = profileDescriptionEl.textContent;
 });
@@ -99,12 +108,14 @@ previewCardCloseBtn.addEventListener("click", function () {
 
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
+  document.addEventListener("keydown", closeModalEsc);
 }
 
 // close modal function
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+  document.removeEventListener("keydown", closeModalEsc);
 }
 //open & close modal functions: END
 
@@ -132,6 +143,8 @@ function handlePostFormSubmit(evt) {
 
   const cardElement = getCardElement(inputValues);
   cardsContainer.prepend(cardElement);
+  evt.target.reset();
+  resetValidation(evt.target, settings);
 }
 newPostModal.addEventListener("submit", handlePostFormSubmit);
 // end of function//
@@ -173,7 +186,9 @@ function getCardElement(data) {
 //new post events
 newPostBtn.addEventListener("click", function () {
   openModal(newPostModal);
-  console.log("newPostBtn was clicked");
+
+  const form = newPostModal.querySelector(settings.formSelector);
+  resetValidation(form, settings);
 });
 
 modalPostCloseBtn.addEventListener("click", function () {
@@ -210,4 +225,4 @@ allModals.forEach((modal) => {
   modal.addEventListener("mousedown", closeModalOverlayClick);
 });
 
-document.addEventListener("keydown", closeModalEsc);
+enableValidation(settings);

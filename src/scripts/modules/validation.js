@@ -1,4 +1,4 @@
-const settings = {
+export const settings = {
   formSelector: ".modal__form",
   inputSelector: ".modal__input",
   submitButtonSelector: ".modal__submit-button",
@@ -77,7 +77,7 @@ const setEventListeners = (formElement, settings) => {
   });
 };
 
-const enableValidation = (settings) => {
+export const enableValidation = (settings) => {
   const formList = document.querySelectorAll(settings.formSelector);
   formList.forEach((formElement) => {
     setEventListeners(formElement, settings);
@@ -85,11 +85,19 @@ const enableValidation = (settings) => {
   console.log(formList);
 };
 
-// testing function for validation reset(buggy)
-const resetValidation = (formElement, inputList, settings) => {
+export const resetValidation = (formElement, settings) => {
+  const inputList = Array.from(
+    formElement.querySelectorAll(settings.inputSelector)
+  );
+  const buttonElement = formElement.querySelector(
+    settings.submitButtonSelector
+  );
+
   inputList.forEach((input) => {
-    hideInputError(formElement, input);
+    hideInputError(formElement, input, settings);
   });
+
+  toggleButtonState(inputList, buttonElement, settings);
 };
 
 enableValidation(settings);

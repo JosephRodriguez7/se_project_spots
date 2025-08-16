@@ -9,7 +9,6 @@
     />
     <meta name="keywords" content="HTML, CSS, Art, Gallery, Coding" />
     <meta name="author" content="Joseph Rodriguez" />
-    <link rel="stylesheet" href="pages/index.css" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <title>Spots Gallery</title>
   </head>
@@ -18,7 +17,7 @@
     <div class="page">
       <header class="header">
         <img
-          src="./images/spots-images/Logo.svg"
+          src="<%=require('./images/spots-images/Logo.svg')%>"
           class="header__logo"
           alt="logo of Spots Gallery"
         />
@@ -27,7 +26,7 @@
         <section class="profile">
           <div class="profile__card">
             <img
-              src="./images/spots-images/avatar.jpg"
+              src="<%=require('./images/spots-images/avatar.jpg')%>"
               class="profile__avatar"
               alt="user avatar"
             />
@@ -37,7 +36,7 @@
               <form class="profile__edit-form"></form>
               <button class="profile__edit-button" id="editProfileBtn">
                 <img
-                  src="./images/slant-pencil-icon.svg.svg"
+                  src="<%=require('./images/slant-pencil-icon.svg.svg')%>"
                   alt="pencil icon"
                 />Edit Profile
               </button>
@@ -45,7 +44,10 @@
           </div>
           <div class="profile__post-form">
             <button class="profile__post-button" id="newPostBtn">
-              <img src="./images/white-plus-sign.svg.svg" alt="plus icon" />
+              <img
+                src="<%=require('./images/white-plus-sign.svg.svg')%>"
+                alt="plus icon"
+              />
               New Post
             </button>
           </div>
@@ -73,7 +75,10 @@
           <div class="modal__header">
             <h2 class="modal__title">Edit profile</h2>
             <button class="modal__close-button" type="button">
-              <img src="./images/cancel-button-dark.svg" alt="x-icon" />
+              <img
+                src="<%=require('./images/cancel-button-dark.svg')%>"
+                alt="x-icon"
+              />
             </button>
           </div>
           <form class="modal__form">
@@ -90,7 +95,7 @@
                   maxlength="40"
                   required
                 />
-                <span id="name-input-error" class="modal__error">Error!</span>
+                <span id="name-input-error" class="modal__error"></span>
               </label>
               <label class="modal__label" for="description-input">
                 Description
@@ -116,7 +121,10 @@
           <div class="modal__header">
             <h2 class="modal__title">New post</h2>
             <button class="modal__close-button" type="button">
-              <img src="./images/cancel-button-dark.svg" alt="x-icon" />
+              <img
+                src="<%=require('./images/cancel-button-dark.svg')%>"
+                alt="x-icon"
+              />
             </button>
           </div>
           <form class="modal__form">
@@ -158,7 +166,10 @@
             class="modal__close-button modal__close-button_alt"
             type="button"
           >
-            <img src="./images/cancel-btn-light.svg" alt="x-icon" />
+            <img
+              src="<%=require('./images/cancel-btn-light.svg')%>"
+              alt="x-icon"
+            />
           </button>
           <img
             class="modal__card-image"
@@ -169,7 +180,5 @@
         </div>
       </div>
     </div>
-    <script src="./scripts/blocks/validation.js"></script>
-    <script src="./scripts/index.js"></script>
   </body>
 </html>

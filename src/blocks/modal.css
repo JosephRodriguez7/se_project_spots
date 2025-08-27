@@ -73,6 +73,14 @@
   position: relative;
 }
 
+.modal__container-del {
+  display: flex;
+  max-width: 630px;
+  position: relative;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
 .modal__header {
   display: flex;
   justify-content: space-between;
@@ -83,8 +91,24 @@
   max-height: 40px;
 }
 
+.modal__header-del {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 630px;
+  margin: 0 auto 32px;
+  max-height: 40px;
+}
+
 .modal__title {
   font-size: 32px;
+  color: rgba(33, 33, 33, 1);
+}
+
+.modal__title-del {
+  font-size: 24px;
   color: rgba(33, 33, 33, 1);
 }
 
@@ -181,6 +205,48 @@
   margin-top: 32px;
 }
 
+.modal__button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.modal__del-button {
+  color: rgba(33, 33, 33, 1);
+  background-color: rgba(255, 101, 101, 1);
+  padding: 0;
+  margin: 0;
+  width: 156px;
+  height: 52px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.modal__del-button:hover {
+  background-color: rgba(255, 51, 51, 1);
+  cursor: pointer;
+}
+
+.modal__cancel-button {
+  color: rgba(33, 33, 33, 1);
+  background-color: transparent;
+  width: 156px;
+  height: 52px;
+  border: solid, 1px;
+  border-radius: 8px;
+  border-color: rgba(33, 33, 33, 1);
+  padding: 0;
+  margin: 0;
+  transition: background-color, 1s ease;
+}
+
+.modal__cancel-button:hover {
+  color: #fff;
+  background-color: rgba(33, 33, 33, 1);
+}
+
 .modal__submit-button:hover {
   background-color: rgba(33, 33, 33, 0.8);
   cursor: pointer;
@@ -212,6 +278,35 @@
 @media screen and (max-width: 461px) {
   .modal__title {
     font-size: 20px;
+  }
+
+  .modal__container-del {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .modal__header-del {
+    margin: 12px auto 20px;
+  }
+
+  .modal__title-del {
+    font-size: 20px;
+  }
+
+  .modal__button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .modal__del-button {
+    max-width: 156px;
+    margin: 0 auto;
+  }
+
+  .modal__cancel-button {
+    max-width: 156px;
+    margin: 0 auto;
   }
 
   .modal__container {

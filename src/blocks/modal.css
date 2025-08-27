@@ -200,8 +200,7 @@
   font-size: 16px;
   background-color: rgba(33, 33, 33, 1);
   color: rgba(252, 245, 229, 1);
-  transition: background-color 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out, opacity 0.5s ease-in-out;
   margin-top: 32px;
 }
 
